@@ -1,0 +1,16 @@
+services:
+  db:
+    image: postgis/postgis:16-3.4
+    container_name: marine_praxis_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: marine_praxis
+      POSTGRES_USER: augustin
+      POSTGRES_PASSWORD: motdepasse
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+
+volumes:
+  postgis_data:
