@@ -208,7 +208,7 @@ __marimo__/
 
 
 # Add the data folder
-data/
+/data/
 
 # Environment / Secrets
 .env
